@@ -47,3 +47,12 @@ body {
   color: #284560;
   transition: color 0.3s ease;
 }
+.caixa{
+  margin:auto;
+}
+main{
+  display: block;
+  unicode-bidi: isolate;
+  padding: 20px;
+
+}
