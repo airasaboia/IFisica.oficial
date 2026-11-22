@@ -6,7 +6,7 @@
 body {
 	font-family: Arial, Helvetica, sans-serif;
   color: #223a51;
-  background-color: #ffffff;
+  background-color: #e6eef5;
   line-height: 1.55;
 }
 /* header */
@@ -114,7 +114,7 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #bfd2e1;
+  background-color: #223a51;
   color: #223a51;
   padding: 10px;
   font-size: 14px;
@@ -131,23 +131,31 @@ main{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-  max-width: 910px;
+  width: 100%;
+  max-width: none;
   margin: 0;
 }
 
 .catalogoferramentas .abaferramenta{
-  min-height: 190px;
+  min-height: 280px;
 }
 
 .abaferramenta{
   transition: transform 0.8s ease, box-shadow 0.18s ease;
-  background-color: #a1b1bd;
-  border: 1px solid #bcd0ed;
+  background-color: #ecf2f8;
+  border: 1px solid #a6b9d5;
   border-radius: 16px;
-  box-shadow: 0 3px 18px rgba(40, 46, 52, 0.04);
-  justify-content: start;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.258);
+  justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 20px;
+}
+
+.abaferramenta p {
+  max-width: 220px;
+  line-height: 1.55;
+  overflow-wrap: break-word;
 }
 
 article{
