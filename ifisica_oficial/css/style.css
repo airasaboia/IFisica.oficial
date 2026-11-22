@@ -109,3 +109,55 @@ main{
   max-height: 100%;
   object-fit: contain;
 }
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bfd2e1;
+  color: #223a51;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.cont_pag2{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.catalogoferramentas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 910px;
+  margin: 0;
+}
+
+.catalogoferramentas .abaferramenta{
+  min-height: 190px;
+}
+
+.abaferramenta{
+  transition: transform 0.8s ease, box-shadow 0.18s ease;
+  background-color: #a1b1bd;
+  border: 1px solid #bcd0ed;
+  border-radius: 16px;
+  box-shadow: 0 3px 18px rgba(40, 46, 52, 0.04);
+  justify-content: start;
+  align-items: center;
+  padding: 20px;
+}
+
+article{
+  display: flex;
+  unicode-bidi: isolate;
+  flex-direction: column;
+}
+
+@media (max-width: 640px) {
+  .catalogoferramentas {
+    grid-template-columns: 1fr;
+  }
+}
