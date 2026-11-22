@@ -58,11 +58,12 @@ main{
 }
 .conteudo{
   gap: 24px;
-  padding: 35px;
+  padding-top: 35px;
   grid-template-columns: 1fr;
   display: grid;
   justify-content: center;
   align-items: center;
+  padding: 54px 0 40px;
 
 }
 
