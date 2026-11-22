@@ -59,12 +59,23 @@ main{
 .conteudo{
   gap: 24px;
   padding-top: 35px;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 45%);
   display: grid;
   justify-content: center;
   align-items: center;
   padding: 54px 0 40px;
 
+}
+
+@media (max-width: 900px) {
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .imagem {
+    width: min(100%, 500px);
+    margin: 0 auto;            /*Esses dois aqui também, o @média e esse .imagem, são pra regulara a altura e largura da imagem, pra não ficar muito grande em telas pequenas */
+  }
 }
 
 .botao{
@@ -80,4 +91,21 @@ main{
   display: inline-flex;
   align-items: center;
   cursor: pointer;
+}
+.imagem{
+  display: flex;
+  border:0px solid #364753;
+  border-radius: 12px;
+  background-color:#bfd2e1;
+  width: 100%;
+  aspect-ratio: 3 / 2;/*isso aqui é para manter a imagem com aquela altura , mas também com aquela largura */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+}
+.imagem img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
