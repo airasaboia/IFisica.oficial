@@ -9,6 +9,14 @@ body {
   background-color: #e6eef5;
   line-height: 1.55;
 }
+.pagina-livros {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.pagina-livros main {
+  flex: 1;
+}
 /* header */
 .header {
   display: flex;
@@ -115,7 +123,7 @@ main{
   justify-content: center;
   align-items: center;
   background-color: #223a51;
-  color: #223a51;
+  color: #d2e3f383;
   padding: 10px;
   font-size: 14px;
 }
@@ -169,3 +177,104 @@ article{
     grid-template-columns: 1fr;
   }
 }
+
+.caixa-livros{
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  width: calc(100% - 48px);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+aside{
+  unicode-bidi: isolate;
+  display: flex;
+}
+
+.barra{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: sticky;
+  top: 96px;
+  max-height: calc(100vh - 116px);
+  overflow-y: auto;
+  background-color: #bfd2e19a;
+  border: 1px solid #a6b9d5;
+  border-radius: 16px;
+  height: max-content;
+}
+
+.barra a{
+  display: block;
+  text-decoration: none;
+  color: #223a51;
+  font-size: 14px;
+  border-radius: 9px;
+  transition: background-color 0.18s ease;
+  padding: 9px 12px;
+  margin: 3px 0;
+}
+
+.barra a:hover,
+.barra a:focus-visible{
+  background-color: #bfd2e1;
+}
+
+#secao-didaticos{
+  min-width: 0;
+  padding: 24px;
+  background-color: #ecf2f8;
+  border: 1px solid #a6b9d5;
+  border-radius: 16px;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.12);
+}
+
+#secao-didaticos ul{
+  display: grid;
+  gap: 12px;
+}
+
+#secao-didaticos li a{
+  display: block;
+  padding: 8px 16px;
+  color: #223a51;
+  text-decoration: none;
+  background-color: #a9c1d480;
+  border: 1px solid #bfd2e1;
+  border-radius: 10px;
+  transition: background-color 0.18s ease;
+}
+
+#secao-didaticos li a:hover,
+#secao-didaticos li a:focus-visible{
+  background-color: #bfd2e1;
+}
+
+#secao-didaticos li a p{
+  margin: 0;
+}
+
+@media (max-width: 760px){
+  .caixa-livros{
+    grid-template-columns: minmax(0, 1fr);
+    width: calc(100% - 30px);
+  }
+
+  .barra{
+    position: static;
+    flex-direction: row;
+    max-height: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .barra a{
+    flex: 0 0 auto;
+  }
+}
+
+
+
