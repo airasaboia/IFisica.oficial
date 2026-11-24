@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
 	font-family: Arial, Helvetica, sans-serif;
   color: #223a51;
@@ -187,6 +190,23 @@ article{
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.caixa-video-aulas{
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.conteudo-video-aulas{
+  display: grid;
+  gap: 24px;
+  min-width: 0;
+}
+
 aside{
   unicode-bidi: isolate;
   display: flex;
@@ -220,6 +240,28 @@ aside{
 
 .barra a:hover,
 .barra a:focus-visible{
+  background-color: #bfd2e1;
+}
+
+main.caixa-video-aulas section{
+  scroll-margin-top: 90px;
+}
+
+main.caixa-video-aulas section a{
+  display: block;
+  padding: 5px 16px;
+  margin-bottom: 10px;
+  color: #223a51;
+  text-decoration: none;
+  background-color: #a9c1d480;
+  border: 1px solid #6b7f8e58;
+  border-radius: 10px;
+  transition: background-color 0.18s ease;
+  
+}
+
+main.caixa-video-aulas section a:hover,
+main.caixa-video-aulas section a:focus-visible{
   background-color: #bfd2e1;
 }
 
@@ -263,6 +305,10 @@ aside{
     width: calc(100% - 30px);
   }
 
+  .caixa-video-aulas{
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .barra{
     position: static;
     flex-direction: row;
@@ -275,6 +321,19 @@ aside{
     flex: 0 0 auto;
   }
 }
+#mru, #mruv, #newton, #energia, #trabalho{
+   display: block;
+  padding: 8px 16px;
+  color: #223a51;
+  text-decoration: none;
+  background-color: #cbd6e080;
+  border: 1px solid #7396b1bf;
+  box-shadow: #6793b2b6;
+  border-radius: 10px;
+  transition: background-color 0.18s ease;
+
+}
+
 
 
 
